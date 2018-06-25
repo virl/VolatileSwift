@@ -39,7 +39,9 @@ class VolatileSwift
 	{
 		let thread = Thread {
 			while(true) {
-				let baz = globalFoo.bar.baz
+				autoreleasepool(invoking: { () -> Void in
+					let baz = globalFoo.bar.baz
+				})
 			}
 		}
 		thread.start()
@@ -49,7 +51,9 @@ class VolatileSwift
 	{
 		let thread = Thread {
 			while(true) {
-				globalFoo.bar = Bar()
+				autoreleasepool(invoking: { () -> Void in
+					globalFoo.bar = Bar()
+				})
 			}
 		}
 		thread.start()
