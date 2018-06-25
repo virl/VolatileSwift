@@ -1,7 +1,9 @@
 # VolatileSwift
 Swift crash due to memory corruption on property assignment.
 
-Crashes with EXC_BAD_ACCESS after minute run on multicore system:
+Checked on Macbook Pro 15" Middle 2015, macOS 10.13.5 (17F77), Xcode 9.4.1 (9F2000).
+
+Crashes with EXC_BAD_ACCESS after 1 minute run on multicore system:
 
 ```
 VolatileSwift(44779,0x70000b624000) malloc: *** error for object 0x10303d2a0: double free
