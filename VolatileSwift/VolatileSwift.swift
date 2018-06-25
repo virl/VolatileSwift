@@ -24,11 +24,11 @@ class VolatileSwift
 {
 	func start()
 	{
-		for _ in 1...1000 {
+		for _ in 1...100 {
 			launchReader()
 		}
 		
-		for _ in 1...1000 {
+		for _ in 1...100 {
 			launchWriter()
 		}
 		
